@@ -1,0 +1,17 @@
+type Query {
+  movieByCode(code: ID): Movie
+}
+
+type Movie {
+  code: ID
+  title: String
+  releaseDate: String
+  actors: [Actor]
+}
+
+type Actor {
+  code: ID
+  name: String
+  birthDate: String
+  movies: [Movie]
+}
